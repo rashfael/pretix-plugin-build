@@ -20,7 +20,7 @@ class CustomBuild(build):
         if locale_found:
             management.call_command('compilemessages', verbosity=1)
 
-        if (os.path.exists('pretixplugin.vite.json')
+        if (os.path.exists('vite.config.ts')
                 and os.path.exists('package.json')):
             self._build_vite()
 
